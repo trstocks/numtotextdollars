@@ -62,8 +62,6 @@ class Money:
             return value2
 class Convert:
     def num_to_word(number):
-        #remove new line input
-        number=number.replace('\n', '')
         numbLength = len(number)
         if numbLength == 1:#less than 10
             if int(number) is not 0:
@@ -83,7 +81,9 @@ class Convert:
             return Money.millions(number)+"Dollars"
         else:
             return 0
-
-with open(sys.argv[1], 'r') as lines:
-    for line in lines:
-        print(Convert.num_to_word(line))
+if sys.argv[1:]:
+    with open(sys.argv[1], 'r') as lines:
+        for line in lines:
+            #remove new line input
+            line=line.replace('\n', '')
+            print(Convert.num_to_word(line))
