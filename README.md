@@ -2,6 +2,7 @@
 This is a basic example of converting numerical value to text.
 ##Running the program using Python
 1. Using Python3, run the python file with an argument(a path to the text document listing a number for each row).
+
 ##Running The progrem using .NET
 1. From a commandline/terminal navigate to the project directory.
 2. Type "dotnet restore"
