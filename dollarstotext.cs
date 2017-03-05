@@ -25,7 +25,7 @@ namespace DollarsToText{
             string value1;
             string value2;
             value1 = Ones(num.Substring(0,1));
-            string stringnum= num.Substring(1,0);
+            string stringnum= num.Substring(1,1);
             if ( stringnum=="1"){
                 value2=Teens(num.Substring(1,2));
             }
@@ -33,7 +33,7 @@ namespace DollarsToText{
                 value2=Tens(num.Substring(1,2));
             }
             if ( value1 != ""){
-                return value1+ "Hundred" +value2;
+                return value1+ "Hundred" + value2;
             }
             else{
                 return value2;
@@ -45,7 +45,7 @@ namespace DollarsToText{
                 value1 = Ones(num.Substring(0,1));
                 value2 = Hundreds(num.Substring(1,3));
                 if ( value1 != ""){
-                    return value1+ "Thousand" +value2;
+                    return value1+ "Thousand" + value2;
                 }
                 else 
                     return value2;
